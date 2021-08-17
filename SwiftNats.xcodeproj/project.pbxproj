@@ -13,6 +13,7 @@
 		39B173B926CB9BD70078F80F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B173B726CB9BD70078F80F /* Main.storyboard */; };
 		39B173BB26CB9BD90078F80F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39B173BA26CB9BD90078F80F /* Assets.xcassets */; };
 		39B173BE26CB9BD90078F80F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39B173BC26CB9BD90078F80F /* LaunchScreen.storyboard */; };
+		39B173C426CB9FAE0078F80F /* NatsConnectMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B173C326CB9FAE0078F80F /* NatsConnectMode.swift */; };
 		8F1051111C58781D008EA2E8 /* DelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F10510F1C587817008EA2E8 /* DelegateTests.swift */; };
 		8F1051131C588603008EA2E8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 8F1051121C588603008EA2E8 /* LICENSE */; };
 		8F4EA2011C50BDFD0051E0DC /* SwiftNats.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F4EA2001C50BDFD0051E0DC /* SwiftNats.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -44,6 +45,7 @@
 		39B173BA26CB9BD90078F80F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39B173BD26CB9BD90078F80F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39B173BF26CB9BD90078F80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39B173C326CB9FAE0078F80F /* NatsConnectMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NatsConnectMode.swift; path = ../../NatsDemo/NatsConnectMode.swift; sourceTree = "<group>"; };
 		8F10510F1C587817008EA2E8 /* DelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateTests.swift; sourceTree = "<group>"; };
 		8F1051121C588603008EA2E8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		8F4EA1FD1C50BDFD0051E0DC /* SwiftNats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 				8F4EA21B1C50BED80051E0DC /* Connection.swift */,
 				8F4EA2191C50BEC60051E0DC /* Protocol.swift */,
 				8F4EA21D1C50BF210051E0DC /* Extension.swift */,
+				39B173C326CB9FAE0078F80F /* NatsConnectMode.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F4EA21E1C50BF210051E0DC /* Extension.swift in Sources */,
+				39B173C426CB9FAE0078F80F /* NatsConnectMode.swift in Sources */,
 				8F4EA21A1C50BEC60051E0DC /* Protocol.swift in Sources */,
 				8FC9A6DF1C5A8ED600717470 /* README.md in Sources */,
 				8F4EA21C1C50BED80051E0DC /* Connection.swift in Sources */,
