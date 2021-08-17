@@ -24,8 +24,6 @@ class ViewController: UIViewController {
 //                      mode: .unAuthorization // default)
         pubsub.delegate = self
         
-        pubsub.subscribe(subject)
-        
     }
     
     @IBAction func publish(_ sender: Any) {
@@ -34,10 +32,12 @@ class ViewController: UIViewController {
     
     @IBAction func connect(_ sender: Any) {
         pubsub.connect()
+        pubsub.subscribe(subject)
     }
     
     @IBAction func disconnect(_ sender: Any) {
         pubsub.disconnect()
+        pubsub.unsubscribe(subject)
     }
 }
 
@@ -70,6 +70,6 @@ extension ViewController: NatsDelegate {
     }
     func natsDidReceiveProcessError(nats: Nats, msg: String) {
         print("natsDidReceiveProcessError")
-        labelStatus.text = "natsDidReceiveProcessError"
+        labelStatus.text = msg
     }
 }

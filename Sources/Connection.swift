@@ -360,6 +360,8 @@ open class Nats: NSObject, StreamDelegate {
      *
      */
     fileprivate func dispatchInputStream(_ msg: String) {
+        let handler = Message()
+        handler.handleMsg(message: msg)
         if msg.hasPrefix(Proto.PING.rawValue) {
             processPing()
         } else if msg.hasPrefix(Proto.OK.rawValue) {
@@ -368,6 +370,8 @@ open class Nats: NSObject, StreamDelegate {
             processErr(msg.removePrefix(Proto.ERR.rawValue))
         } else if msg.hasPrefix(Proto.MSG.rawValue) {
             processMessage(msg)
+        } else if (handler.symbol ?? "").hasPrefix(Proto.MSG.rawValue){
+            processMessage(handler.messageString ?? "")
         }
     }
 
@@ -450,6 +454,7 @@ open class Nats: NSObject, StreamDelegate {
      *
      */
     fileprivate func processPing() {
+        print(Proto.PONG.rawValue)
         sendText(Proto.PONG.rawValue)
     }
 }

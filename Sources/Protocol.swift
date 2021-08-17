@@ -66,8 +66,8 @@ internal enum Proto: String {
     case INFO = "INFO"
     case OK = "+OK"
     case ERR = "-ERR"
-    case PONG = "PONG"
-    case PING = "PING"
+    case PONG = "OP_PONG"
+    case PING = "OP_PING"
 }
 
 internal struct Server {

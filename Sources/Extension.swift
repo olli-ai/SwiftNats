@@ -59,7 +59,7 @@ extension OutputStream {
         let bytes = (data as NSData).bytes.bindMemory(to: UInt8.self, capacity: data.count)
         _ = self.write(bytes, maxLength: data.count)
 
-        // print("writeStream \(data.toString())")
+         print("writeStream \(data.toString())")
     }
 
     func writeStreamLoop(_ data: Data) {
