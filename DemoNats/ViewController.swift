@@ -57,7 +57,7 @@ extension ViewController: NatsDelegate {
     func natsDidReceiveMessage(nats: Nats, msg: NatsMessage) {
         print("natsDidReceiveMessage")
         labelStatus.text = "natsDidReceiveMessage"
-        print(msg)
+        print(msg.payload)
     }
     func natsDidReceivePing(nats: Nats) {
         print("natsDidReceivePing")
