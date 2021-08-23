@@ -273,7 +273,7 @@ open class Nats: NSObject, StreamDelegate {
 
                     outStream.writeStreamLoop(data) // -> send
                     if let info = inStream.readStreamLoop() { // <- receive
-                        print(info)
+                        log(info)
                         if info.hasPrefix(Proto.ERR.rawValue) {
                             let err = info.removePrefix(Proto.ERR.rawValue)
                             didDisconnect(NSError(domain: NSURLErrorDomain, code: 400, userInfo: [NSLocalizedDescriptionKey: err]))
@@ -456,5 +456,16 @@ open class Nats: NSObject, StreamDelegate {
     fileprivate func processPing() {
         print(Proto.PONG.rawValue)
         sendText(Proto.PONG.rawValue)
+    }
+    /**
+     * log(_ items: Any) -> Void
+     * items: it's you want to log
+     * Will print on the console win then `verbose == true`
+     *
+     */
+    fileprivate func log(_ items: Any) {
+        if verbose {
+            print(items)
+        }
     }
 }
